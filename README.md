@@ -1,13 +1,38 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# animated-portfolio
+Cool Looking Animated Portfolio
 
-## Run Locally
+# TypeScript Project
 
-**Prerequisites:**  Node.js
+This is a TypeScript-based project set up for local development using Node.js and npm.
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Run the app:
-   `npm run dev`
+## 🚀 Getting Started
+
+Follow the steps below to set up and run the project on your local machine.
+
+---
+
+## 📦 Prerequisites
+
+Make sure you have the following installed:
+
+- **Node.js** (v16+ recommended)
+- **npm** (comes with Node.js)
+
+Check versions:
+```bash
+node -v
+npm -v
+```
+---
+
+## Install Dependencies
+```bash
+npm install
+```
+
+## Run Project
+```bash
+npm run dev
+```
