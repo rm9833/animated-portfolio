@@ -85,7 +85,7 @@ const About: React.FC = () => {
           <div className="space-y-8">
             <div className="relative group mx-auto w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-slate-700 shadow-2xl">
               <img 
-                src="animated-portfolio/blob/main/Resources/profile-pic.jpg"
+                src="/Resources/profile-pic.jpg"
                 alt="Rahul Maurya" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
