@@ -1,0 +1,78 @@
+/* Scroll-triggered animations */
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms cubic-bezier(.2,.8,.2,1), transform 600ms cubic-bezier(.2,.8,.2,1);
+  will-change: opacity, transform;
+}
+
+/* Directional modifiers */
+.animate-on-scroll.fade-left { transform: translateX(-20px); }
+.animate-on-scroll.fade-right { transform: translateX(20px); }
+.animate-on-scroll.zoom-in { transform: scale(.98); }
+
+/* When in view */
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* Optional slight stagger helper */
+.animate-on-scroll[data-delay] {
+  transition-delay: calc(var(--delay, 0) * 100ms);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll { transition: none !important; transform: none !important; opacity: 1 !important; }
+}
+
+/* Utility: hide scrollbars cross-browser */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* Projects responsive behavior: vertical stack for screens <= 999px */
+.projects-vertical { display: none; }
+.projects-carousel-small { display: block; }
+.projects-carousel-large { display: none; }
+
+@media (max-width: 999px) {
+  .projects-vertical { display: block; }
+  .projects-carousel-small { display: none; }
+  .projects-carousel-large { display: none; }
+}
+
+/* Vertical scroller settings when showing 3 cards */
+.projects-vertical.scroll-3 {
+  max-height: 624px; /* 3 * 208px (h-52) */
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+.projects-vertical.scroll-3 > * { scroll-snap-align: start; }
+
+/* Apply extra vertical padding on the Hero section for narrow viewports (<800px) */
+@media (max-width: 800px) {
+  .home-compact {
+    padding-top: 5rem; /* 80px */
+    padding-bottom: 5rem; /* 80px */
+  }
+  .home-compact .hero-content {
+    margin-top: 2rem; /* 32px */
+  }
+  .home-compact .leading-relaxed{
+    padding-top: 2rem; /* 16px */
+  }
+}
+
+/* Ensure SkillsChart has a minimum height on viewports <= 1100px so ResponsiveContainer can render */
+@media (max-width: 1100px) {
+  .skills-loader {
+    min-height: 18rem; /* 288px */
+  }
+}
