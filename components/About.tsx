@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Briefcase, Trophy } from 'lucide-react';
 import SkillsChart from './SkillsChart';
 import { SkillData, Experience } from '../types';
+import profilepic from '../Resources/profile-pic.jpg';
 
 const skillsData: SkillData[] = [
   { subject: 'SAP ABAP', A: 90, fullMark: 100 },
