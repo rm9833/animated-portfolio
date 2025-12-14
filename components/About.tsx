@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Briefcase, Trophy } from 'lucide-react';
 import SkillsChart from './SkillsChart';
 import { SkillData, Experience } from '../types';
-import profilepic from '..profile-pic.jpg';
+import profilePic from "../Resources/profile-pic.jpg";
 
 const skillsData: SkillData[] = [
   { subject: 'SAP ABAP', A: 90, fullMark: 100 },
@@ -86,7 +86,7 @@ const About: React.FC = () => {
           <div className="space-y-8">
             <div className="relative group mx-auto w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-slate-700 shadow-2xl">
               <img 
-                src="Resources/profile-pic.jpg"
+                src={profilePic}
                 alt="Rahul Maurya" 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
